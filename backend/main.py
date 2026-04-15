@@ -1,3 +1,4 @@
+from fastapi import FastAPI
 from backend.llm import split_into_panels
 from backend.image_gen import generate_image
 from backend.pdf import create_pdf
