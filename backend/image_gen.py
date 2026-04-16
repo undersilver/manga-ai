@@ -3,8 +3,8 @@ import os
 
 def generate_image(panel):
     try:
-        # 明示的にトークン設定
-        os.environ["REPLICATE_API_TOKEN"] = os.getenv("REPLICATE_API_TOKEN")
+        # 👇 ここに入れる（この位置が重要）
+        print("TOKEN:", os.getenv("REPLICATE_API_TOKEN"))
 
         output = replicate.run(
             "stability-ai/sdxl",
