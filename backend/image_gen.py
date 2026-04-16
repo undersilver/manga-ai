@@ -1,11 +1,8 @@
 import replicate
-import os
+import time
 
 def generate_image(panel):
     try:
-        # 👇 ここに入れる（この位置が重要）
-        print("TOKEN:", os.getenv("REPLICATE_API_TOKEN"))
-
         output = replicate.run(
             "stability-ai/sdxl",
             input={
@@ -14,6 +11,9 @@ def generate_image(panel):
                 "height": 768
             }
         )
+
+        time.sleep(10)  # ← 超重要（制限回避）
+
         return output[0]
 
     except Exception as e:
