@@ -4,7 +4,7 @@ import time
 def generate_image(panel):
     try:
         output = replicate.run(
-            "stability-ai/sdxl",   # ← バージョン消す（重要）
+            "lucataco/sdxl",   # ← ここ変更（これが今使える）
             input={
                 "prompt": f"manga, black and white, {panel['scene']}"
             }
