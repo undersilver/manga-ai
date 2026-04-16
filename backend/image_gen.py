@@ -4,7 +4,7 @@ import time
 def generate_image(panel):
     try:
         output = replicate.run(
-            "lucataco/sdxl",   # ← ここ変更（これが今使える）
+            "black-forest-labs/flux-schnell",   # ← これが今一番安定
             input={
                 "prompt": f"manga, black and white, {panel['scene']}"
             }
