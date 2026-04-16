@@ -15,4 +15,4 @@ async def generate(data: dict):
         img = generate_image(panel)
         images.append(img)
 
-    return {"result": images}
+    return {"images": images}   # ← ここ修正
